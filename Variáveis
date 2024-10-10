@@ -1,3 +1,6 @@
+const prompt = require('prompt-sync');
+const entrada = prompt();
+
 let anoAtual = 2024;
 const NomeCompleto = "Pedro Gonçalves de Castro";
 let idade = 17;
@@ -11,3 +14,54 @@ nomeCompleto = "Pedro Gonçalves de Castro";
 idade = 18;
 cidadeAtual = "São José dos Pinhais";
 console.log(`Opa, sou o ${nomeCompleto} em Agosto eu faço ${idade} anos, estou morando em ${cidadeAtual} e esse ano eu estou cursando ${cursoFaculdade}.`);
+
+//Agência de viagens
+
+console.log("---------------");
+console.log("     LOGIN     ");
+console.log("---------------");
+
+const loginCerto = "Pedro";
+const senhaCerta = "181280";
+
+var login = entrada("Digite seu login: ");
+var senha = entrada("Digite sua senha: ");
+
+while (login != loginCerto) {
+  console.log("Login não encontrado!");
+  login = entrada("Digite novamente seu login:");
+}
+ while (senha != senhaCerta) {
+  console.log("senha não encontrada!");
+  senha = entrada("Digite sua senha novamente:");
+}
+
+var nomeComprador = entrada ("qual é o seu nome?");
+const cpfComprador = entrada ("qual seria seu CPF?");
+var idadeComprador = entrada ("qual é a sua idade?");
+const listaDeDestinos = new Array(
+ "Florianópolis",
+  "Rio de Janeiro",
+  "São Paulo",
+"Vilhena",
+"Belo Horizonte"
+  );
+
+console.log(`olá Sr. ${nomeComprador}, portador do cpf ${cpfComprador} qual viagem gostaria de fazer das cidades de ${listaDeDestinos}, o senhor possui ${idadeComprador} de idade, certo?`);
+
+
+console.log(listaDeDestinos[0]);
+console.log("");
+
+console.log(`Boa tarde Sr. ${nomeComprador}, mais uma viagem foi adicionada a sua lista de destinos, gostaria de participar?`)
+
+listaDeDestinos.push("Xangai")
+
+if (idadeComprador < 18)
+{ console.log (`infelizmente não podemos te vender uma passagem, pois o senhor é menor de idade.`);
+ 
+}
+
+if (idadeComprador > 18){
+  console.log(`Parabéns, sua compra da passagem foi um sucesso, favor verificar a ${listaDeDestinos}`);
+}
