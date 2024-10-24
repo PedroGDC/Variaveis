@@ -58,7 +58,7 @@ console.log(`Boa tarde Sr. ${nomeComprador}, mais uma viagem foi adicionada a su
 listaDeDestinos.push("Xangai")
 
 if (idadeComprador < 18)
-{ console.log (`infelizmente não podemos te vender uma passagem, pois o senhor é menor de idade.`);
+{ console.log (`Mas infelizmente não podemos te vender uma passagem, pois o senhor é menor de idade.`);
  
 }
 
